@@ -2,6 +2,9 @@
   "name": "ride-dott",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
     "@tensorflow-models/mobilenet": "^2.1.0",
     "@testing-library/jest-dom": "^5.16.5",
