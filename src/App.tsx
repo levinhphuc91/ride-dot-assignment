@@ -58,7 +58,7 @@ function App() {
   }, [images]);
 
   return (
-    <div className='App md:container md:mx-auto items-center flex flex-col'>
+    <div className='App md:container md:mx-auto items-center flex flex-col text-center'>
       <h2 className='text-4xl mb-4'>Searching dogs based on breed</h2>
       <Upload onChange={onChange} data={images} />
       {loading && <DotLoader color='#36d7b7' />}
