@@ -25,15 +25,14 @@ function App() {
       setLoading(true);
       // Load the model.
       const model = await mobilenet.load();
-
+      
       // Classify the image.
       const predictions = await model.classify(img);
       const topBreed = predictions[0]?.className;
       if (topBreed) {
         GET(`breed/${formatBreedName(topBreed)}/images/random/20`)
           .then(({ message, code }: Response) => {
-            if (code) {
-            } else {
+            if (!code) {
               const data = message.map((m: string) => {
                 return {
                   original: m,
