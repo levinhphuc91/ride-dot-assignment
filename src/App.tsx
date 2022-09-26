@@ -54,6 +54,7 @@ function App() {
   useEffect(() => {
     setListDogs([]);
     fetchDogBreeds();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [images]);
 
   return (
